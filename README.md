@@ -1,46 +1,9 @@
-# Getting Started with Create React App
+I have used very less CSS because I don't want the project look like fancy. The whole project is based on Medical Device Equipment. So as an enterprise level application, I kept the design minimalistic. I have mainly relied on bootstrap.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+On Home page, I have displayed available medical devices by using /modeltype api. I have The model type data to first 30 elements. Then selecting a model led to device detail's data using //modeldata api which displayed over an Modal using react modal package. To add new device model, used /devicemodel api and get all typeid through /devicetype api and presented in a select list. Implemented Login/Logout -authentication based on Oauth api 2.0 key to use the app. And used bootstrap spinner for loading the page.
 
-## Available Scripts
+I am a novice in basis of typeScript. Actually this is my first attempt on use typescript with react. So I need to learn the basics first then apply it. I tried my level best to make the app as the documentation says. Thanks for your valuable time and consideration. Have a great day.
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+**Login to use
+Email: Mozell.Jacobi@yahoo.com
+Password: password**

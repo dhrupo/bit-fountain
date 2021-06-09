@@ -1,25 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import Login from './Login/Login';
+import Navigation from './Navigation/Navigation';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
+import Model from './Model/Model';
+import DeviceModel from './DeviceModel/DeviceModel';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+    <Navigation></Navigation>
+    <Switch>
+      <Route path="/login">
+        <Login></Login>
+      </Route>
+      <PrivateRoute exact path="/">
+        <Model></Model>
+      </PrivateRoute>
+      <PrivateRoute path="/modeltype">
+        <Model></Model>
+      </PrivateRoute>
+      <PrivateRoute path="/devicemodel">
+        <DeviceModel></DeviceModel>
+      </PrivateRoute>
+    </Switch>
+    </Router>
   );
 }
 

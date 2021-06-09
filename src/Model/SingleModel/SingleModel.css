@@ -1,0 +1,6 @@
+.card:hover {
+  background-color: lightgray;
+}
+.card {
+  transition: 0.5s;
+}

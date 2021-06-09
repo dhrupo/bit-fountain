@@ -20,10 +20,10 @@ const Navigation = () => {
             {
             sessionStorage.getItem('token') ?
               <li className="nav-item">
-                <Link className="nav-link" to="/" onClick={() => {sessionStorage.removeItem('token')}}>Logout</Link>
+                <a className="nav-link" href="/" onClick={() => {sessionStorage.removeItem('token')}}>Logout</a>
               </li> :
               <li className="nav-item">
-                <Link className="nav-link" to="/login">Login</Link>
+                <a className="nav-link" href="/login">Login</a>
               </li>
             }
           </ul>

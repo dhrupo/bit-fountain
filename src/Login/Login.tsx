@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useHistory, useLocation } from 'react-router-dom';
 import axios from 'axios';
 
 const Login = () => {
@@ -7,9 +6,9 @@ const Login = () => {
   const [password, setPassword] = useState(null);
   const [error, setError] = useState("");
 
-  let history = useHistory();
-  let location = useLocation();
-  let { from }:any = location.state || { from: { pathname: "/" } };
+  // let history = useHistory();
+  // let location = useLocation();
+  // let { from }:any = location.state || { from: { pathname: "/" } };
 
   const handleNameChange = (event:any) => {
     setemail(event.target.value);
@@ -24,7 +23,8 @@ const Login = () => {
     try {
       const res = await axios.post("http://163.47.115.230:30000/api/login", {email, password})
       sessionStorage.setItem('token', res.data.access_token);
-      history.replace(from);
+      // history.replace(from);
+      window.location.replace("/");
     }
     catch (err) {
       setError("Please Provide valid email or password.");
